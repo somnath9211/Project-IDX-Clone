@@ -1,16 +1,11 @@
-import usePing from "./hooks/apis/queries/usePing"
+import { Route, Routes } from "react-router-dom"
+import { CreateProject } from "./pages/CreateProject"
 
 function App() {
-
-  const { isLoading, data } = usePing();
-
-  if (isLoading) {
-    return (
-      <>Loading...</>
-    )
-  }
   return (
-    <>Hello {data.message}</>
+    <Routes>
+      <Route path="/" element={<CreateProject />} />
+    </Routes>
   )
 }
 
